@@ -36,7 +36,7 @@ def create_output(laundries):
     output = open("entrega_1.txt", "w+")
     for key in laundries:
         for value in laundries[key]:
-            output.write(f"{key} {value}")
+            output.write(f"{key} {value}\n")
     output.close()
 
 def main():
