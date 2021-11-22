@@ -21,22 +21,19 @@ def load_data(input_file):
 def parse_data(data, times, incompatibilities):
     if (data[0] == 'e'):
         incompatibilities[int(data[1])].append(int(data[2]))
+        incompatibilities[int(data[2])].append(int(data[1]))
     elif (data[0] == 'n'):
         times[data[1]] = data[2]
     return
 
 
 def check_compatibility(garment, laundries, laundry_number, incompatibilities):
-    incompatible_own = True
     incompatible_garments = incompatibilities.get(garment)
     if (incompatible_garments):
         for g in laundries.get(laundry_number):
             if g in incompatible_garments:
-                incompatible_own = False
-    for v in incompatibilities.values():
-        if garment in v:
-            return False
-    return incompatible_own
+                return False
+    return True
 
 
 def create_output(laundries):
