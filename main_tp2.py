@@ -27,12 +27,16 @@ def parse_data(data, times, incompatibilities):
 
 
 def check_compatibility(garment, laundries, laundry_number, incompatibilities):
+    incompatible_own = True
     incompatible_garments = incompatibilities.get(garment)
     if (incompatible_garments):
         for g in laundries.get(laundry_number):
             if g in incompatible_garments:
-                return False
-    return True
+                incompatible_own = False
+    for v in incompatibilities.values():
+        if garment in v:
+            return False
+    return incompatible_own
 
 
 def create_output(laundries):
@@ -51,7 +55,7 @@ def main():
         laundry_number = 1
         added = False
         if (laundry_number in laundries.keys()):
-            while(not added and laundry_number < len(laundries.keys())):
+            while(not added and laundry_number <= len(laundries.keys())):
                 if(check_compatibility(garment, laundries, laundry_number,
                                        incompatibilities)):
                     laundries[laundry_number].append(garment)
