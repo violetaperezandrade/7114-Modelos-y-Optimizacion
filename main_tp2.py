@@ -49,6 +49,7 @@ def main():
     laundries = defaultdict(list)
     laundry_number = 1
     for garment, _ in sorted(times.items(), key=lambda item: item[1]):
+        garment = int(garment)
         laundry_number = 1
         added = False
         if (laundry_number in laundries.keys()):
