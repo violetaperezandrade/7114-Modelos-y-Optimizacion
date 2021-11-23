@@ -48,7 +48,7 @@ def main():
     (times, incompatibilities, garments_number) = load_data("input_tp2.txt")
     laundries = defaultdict(list)
     laundry_number = 1
-    for garment, _ in sorted(times.items(), key=lambda item: item[1],
+    for garment, _ in sorted(times.items(), key=lambda item: int(item[1]),
                              reverse=True):
         garment = int(garment)
         laundry_number = 1
