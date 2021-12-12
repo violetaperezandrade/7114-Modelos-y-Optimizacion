@@ -37,7 +37,7 @@ def check_compatibility(garment, laundries, laundry_number, incompatibilities):
 
 
 def create_output(laundries):
-    output = open("entrega_2.txt", "w+")
+    output = open("entrega_3.txt", "w+")
     for key in laundries:
         for value in laundries[key]:
             output.write(f"{value} {key}\n")
@@ -45,7 +45,7 @@ def create_output(laundries):
 
 
 def main():
-    (times, incompatibilities, garments_number) = load_data("input_tp2.txt")
+    (times, incompatibilities, garments_number) = load_data("tercer_problema.txt")
     laundries = defaultdict(list)
     laundry_number = 1
     for garment, _ in sorted(times.items(), key=lambda item: int(item[1]),
