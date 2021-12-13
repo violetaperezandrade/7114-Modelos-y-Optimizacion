@@ -25,5 +25,15 @@ Una idea para poder optimizarlo fue la siguiente:
 
 Antes de crear los lavados, se ordenó la lista de prendas a recorrer por tiempo de lavado de forma descendiente. De este modo, los lavados se llenan primero con prendas de mayor duración, y las prendas que pueden llegar a quedar solas al final son las de menor duración. De esta forma, queda algo emparejada la distribucion de prendas en los lavados en cuanto al tiempo ademas de la compatibilidad.
 
+# Tercera Parte
+El algoritmo provisto, resuelve el problema de la siguiente forma. Se crea un grafo, al cual se le asignan 
+distintos colores donde cada color puede ser pensado como cada lavado en nuestro problema de la lavanderia. 
+El algoritmo original, le asigna un lavado(color) a cada prenda, por lo que no es para nada eficiente. El
+valor obtenido con este primer algoritmo fue de 97, haciendo uso de una gran cantidad de tiempo.
+Para poder optimizar el algoritmo se realizó lo siguiente:
+Primero se ejecuto el codigo entregado en el ultimo trabajo practico con el nuevo input, obteniendo asi un
+puntaje que tampoco fue el optimo(106). Una vez obtenido este output, en el codigo provisto se agrego el numero
+de lavado para cada prenda para antes de crear el grafo. Además, se agrego en el código la restricción mencionada 
+en el enunciado. De esta forma, se pudo obtener el valor optimo(91)
 
 
