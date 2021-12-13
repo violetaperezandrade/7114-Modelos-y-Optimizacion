@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="graphs">
+      <UniqueIdentifier>{dbf65c04-f3c8-461f-88cd-e9ef91f88090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphs\inc">
+      <UniqueIdentifier>{22e1fe51-489f-498b-92c1-cc0f33e557bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphs\src">
+      <UniqueIdentifier>{cfa2a6f4-7737-4277-881d-d2dc0479d2f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="graphs\inc\defs.h">
+      <Filter>graphs\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="graphs\inc\graph.h">
+      <Filter>graphs\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="graphs\inc\node.h">
+      <Filter>graphs\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="graphs\inc\nodesList.h">
+      <Filter>graphs\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="graphs\inc\pnode.h">
+      <Filter>graphs\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="graphs\inc\pnodesList.h">
+      <Filter>graphs\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="leer_dimac.h" />
+    <ClInclude Include="lhk_branch_and_cut.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="graphs\src\graph.c">
+      <Filter>graphs\src</Filter>
+    </ClCompile>
+    <ClCompile Include="graphs\src\graphics.c">
+      <Filter>graphs\src</Filter>
+    </ClCompile>
+    <ClCompile Include="graphs\src\node.c">
+      <Filter>graphs\src</Filter>
+    </ClCompile>
+    <ClCompile Include="graphs\src\nodesList.c">
+      <Filter>graphs\src</Filter>
+    </ClCompile>
+    <ClCompile Include="graphs\src\pnode.c">
+      <Filter>graphs\src</Filter>
+    </ClCompile>
+    <ClCompile Include="graphs\src\pnodesList.c">
+      <Filter>graphs\src</Filter>
+    </ClCompile>
+    <ClCompile Include="leer_dimac.c" />
+    <ClCompile Include="lhk_branch_and_cut.c" />
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="tercer_problema.txt" />
+  </ItemGroup>
+</Project>
